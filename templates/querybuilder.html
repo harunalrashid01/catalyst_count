@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Builder</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 20px;
+    }
+    .alert {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Upload Data</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Upload Data</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Query Builder <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Users</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="alert alert-success mt-4" role="alert">
+      <div>
+        <i class="fas fa-check-circle"></i> 342 records found for the query
+      </div>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Query Builder</h5>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="keyword">Keyword</label>
+              <input type="text" class="form-control" id="keyword" placeholder="Keyword">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="industry">Industry</label>
+              <select class="form-control" id="industry">
+                <option value="">Select Industry</option>
+                <option value="Industry 1">Industry 1</option>
+                <option value="Industry 2">Industry 2</option>
+                <option value="Industry 3">Industry 3</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="yearFounded">Year Founded</label>
+              <select class="form-control" id="yearFounded">
+                <option value="">Select Year</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="city">City</label>
+              <select class="form-control" id="city">
+                <option value="">Select City</option>
+                <option value="City 1">City 1</option>
+                <option value="City 2">City 2</option>
+                <option value="City 3">City 3</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="state">State</label>
+              <select class="form-control" id="state">
+                <option value="">Select State</option>
+                <option value="State 1">State 1</option>
+                <option value="State 2">State 2</option>
+                <option value="State 3">State 3</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="country">Country</label>
+              <select class="form-control" id="country">
+                <option value="">Select Country</option>
+                <option value="Country 1">Country 1</option>
+                <option value="Country 2">Country 2</option>
+                <option value="Country 3">Country 3</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="employeesFrom">Employees (From)</label>
+              <select class="form-control" id="employeesFrom">
+                <option value="">Select Employees (From)</option>
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="employeesTo">Employees (To)</label>
+              <select class="form-control" id="employeesTo">
+                <option value="">Select Employees (To)</option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Query Data</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
